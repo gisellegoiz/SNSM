@@ -29,3 +29,11 @@ bash
 Copy code
 ./ngrok tcp 5432
 Isso iniciará um túnel apontando para a porta 5432 do seu localhost, e o ngrok exibirá uma URL pública (por exemplo, 0.tcp.ngrok.io:12345) que você pode usar para acessar o serviço através da internet.
+
+
+Conectar usando o Colab: O ngrok fornecerá um endereço como 0.tcp.ngrok.io:12345. Use este endereço e porta no seu script Colab para substituir localhost e 5432. Por exemplo:
+
+##python code
+
+connection_string = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}"
+Aqui, host seria 0.tcp.ngrok.io e port seria 12345 (ou o que o ngrok fornecer).
