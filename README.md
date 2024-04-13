@@ -1,7 +1,8 @@
 # SNSM
 
-### Integração do colab com o PostGreSQL local foi necessario utilizar o ngrok
+### Integração do colab com o PostGreSQL 
 
+Devido ao banco estar instalado localmente, foi necessário utilizar o ngrok para criar uma conexão segura entre o colab e o postgresql.
 Para macOS e Linux:
 Descompacte o arquivo: Você pode usar um descompressor de arquivos ou o terminal com um comando como:
 bash
