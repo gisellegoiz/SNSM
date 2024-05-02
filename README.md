@@ -1,4 +1,37 @@
-# SNSM
+### Instalação do PostGreSQL pelo terminal
+
+#instalação:
+sudo apt install postgresql postgresql-contrib
+
+#verificar a instalação:
+sudo systemctl status postgresql.service
+
+#acessando:
+sudo -u postgres psql
+
+#acessar o prompt de comando:
+psql
+
+#para sair do prompt:
+\q
+
+#criar um novo banco de dados:
+createdb database
+
+#criar senha:
+ALTER USER postgres WITH PASSWORD 'nova_senha';
+
+#para acessar com senha, o arquivo: sudo nano /etc/postgresql/12/main/pg_hba.conf
+#deve ser alterado substiruindo peer por md5
+
+#reestatar:
+sudo systemctl restart postgresql
+
+
+
+
+
+
 
 ### Integração do colab com o PostGreSQL 
 
