@@ -20,7 +20,8 @@ psql
 createdb database
 
 #criar senha:
-ALTER USER postgres WITH PASSWORD 'nova_senha';
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'nova_senha';"
+
 
 #para acessar com senha, o arquivo: sudo nano /etc/postgresql/12/main/pg_hba.conf
 #deve ser alterado substiruindo peer por md5
