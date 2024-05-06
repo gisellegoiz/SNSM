@@ -1,31 +1,31 @@
-### Instalação do PostGreSQL pelo terminal
+#### Instalação do PostGreSQL pelo terminal
 vm de instalação: 192.168.1.21
 
-# instalação:
+#### instalação:
 sudo apt install postgresql postgresql-contrib
 
-# verificar a instalação:
+#### verificar a instalação:
 sudo systemctl status postgresql.service
 
-#acessando:
+#### acessando:
 sudo -u postgres psql
 
-# acessar o prompt de comando:
+#### acessar o prompt de comando:
 psql
 
-# para sair do prompt:
+#### para sair do prompt:
 \q
 
-# criar um novo banco de dados:
+#### criar um novo banco de dados:
 createdb database
 
-# criar senha:
+#### criar senha:
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'nova_senha';"
 
-# reestatar:
+#### reestatar:
 sudo systemctl restart postgresql
 
-# ajustando o arquivo de configuração para acesso com os demais hosts:
+#### ajustando o arquivo de configuração para acesso com os demais hosts:
 
 $ sudo vi /etc/postgresql/12/main/postgresql.conf
 listen_addresses = 'localhost,192.168.1.21,192.168.1.66,192.168.1.78' 
@@ -34,7 +34,7 @@ listen_addresses = 'localhost,192.168.1.21,192.168.1.66,192.168.1.78'
 
 
 
-### Integração do colab com o PostGreSQL usando ngrok ###
+#### Integração do colab com o PostGreSQL usando ngrok ###
 
 Devido ao banco estar instalado localmente, foi necessário utilizar o ngrok para criar uma conexão segura entre o colab e o postgresql.
 Para macOS e Linux:
@@ -68,7 +68,7 @@ Isso iniciará um túnel apontando para a porta 5432 do seu localhost, e o ngrok
 
 Conectar usando o Colab: O ngrok fornecerá um endereço como 0.tcp.ngrok.io:12345. Use este endereço e porta no seu script Colab para substituir localhost e 5432. Por exemplo:
 
-# python code
+#### python code
 
 connection_string = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}"
 Aqui, host seria 0.tcp.ngrok.io e port seria 12345 (ou o que o ngrok fornecer).
