@@ -1,4 +1,5 @@
 ### Instalação do PostGreSQL pelo terminal
+vm de instalação: 192.168.1.21
 
 #instalação:
 sudo apt install postgresql postgresql-contrib
@@ -27,7 +28,9 @@ ALTER USER postgres WITH PASSWORD 'nova_senha';
 #reestatar:
 sudo systemctl restart postgresql
 
-
+--ajustando o arquivo de configuração para acesso com os demais hosts 
+sudo vi /etc/postgresql/12/main/postgresql.conf
+listen_addresses = 'localhost,192.168.1.21,192.168.1.66,192.168.1.78' 
 
 
 
