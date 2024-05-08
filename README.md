@@ -75,5 +75,12 @@ Aqui, host seria 0.tcp.ngrok.io e port seria 12345 (ou o que o ngrok fornecer).
 
 
 # Execução de scripts do postgre
+Necessario realizar a instalação das bibliotecas 
+$ python3 -m pip install psycopg2-binary
+$ pip install sqlalchemy
+$ pip install pandas
+
+
+
 Para execução de algumas biliotecas do sql é necessário especificar o caminho para a execução do script=  exemplo.: /usr/bin/python3 consulta.py
 
