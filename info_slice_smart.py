@@ -295,6 +295,7 @@ def verticalscale(df_forecast):
         print(row['vdu_id'])  # Exemplo de uso do vdu_id
         print(row['vnf_id'])
         print(row['ns_id'])
+        ns_id = (row['ns_id'])
 
         update_data = {
             "verticalScale": "string",
@@ -310,7 +311,7 @@ def verticalscale(df_forecast):
             }
         }
         verticalscale_up = requests.post(
-            f'https://nbi:9999/osm/nslcm/v1/ns_instances/203e09eb-5d6f-443c-bb1f-9ff0fb4d30d9/verticalscale',
+            f'https://nbi:9999/osm/nslcm/v1/ns_instances/{ns_id}/verticalscale',
             headers=headers, json=update_data, verify=False)
         if verticalscale_up.status_code == 202:
             print("Update realizado com sucesso")
