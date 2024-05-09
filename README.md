@@ -135,3 +135,20 @@ vdu:
       performance-metric: packets_received
 Como você pode ver, uma lista de “métricas NFVI” é definida primeiro no nível VDU, que contém um ID e o nome da métrica normalizada correspondente (neste caso, cpu_utilizatione average_memory_utilization). Os nomes das métricas normalizadas são: cpu_utilization, average_memory_utilization, disk_read_ops, disk_write_ops, disk_read_bytes, disk_write_bytes, packets_received, packets_sent, packets_out_dropped,packets_in_dropped       
 
+
+
+### 5.5.4.3. Exemplo
+Obtenha os descritores:
+
+git clone --recursive https://osm.etsi.org/gitlab/vnf-onboarding/osm-packages.git
+Integre-os:
+
+cd osm-packages
+osm vnfpkg-create autoheal_vnf
+osm nspkg-create autoheal_ns
+Inicie o NS:
+
+osm ns-create --ns_name heal --nsd_name autoheal_nsd --vim_account <VIM_ACCOUNT_NAME>|<VIM_ACCOUNT_ID>
+osm ns-list
+osm ns-show heal
+
