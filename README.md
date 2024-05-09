@@ -84,3 +84,30 @@ $ pip install pandas
 
 Para execução de algumas biliotecas do sql é necessário especificar o caminho para a execução do script=  exemplo.: /usr/bin/python3 consulta.py
 
+# 5.5.1.4.3. 3) Consultando métricas através do NBI baseado em OSM SOL005
+Para coleta de métricas por meio do NBI, deve-se seguir o seguinte formato de URL:
+
+https://<host-ip>:<nbi-port>/osm/nspm/v1/pm_jobs/<project-id>/reports/<network-service-id>
+
+Onde:
+
+<host-ip>: É a máquina onde o OSM está instalado.
+
+<nbi-port>: A porta NBI, ou seja, 9999
+
+<project-id>: Atualmente pode ser qualquer string.
+
+<network-service-id>: É o NS ID obtido após a instanciação do serviço de rede.
+
+Observe que um token deve ser obtido primeiro para consultar uma métrica. Mais informações sobre isso podem ser encontradas na documentação do OSM NBI
+
+Em resposta, você obteria uma lista das métricas VNF disponíveis, por exemplo:
+
+   performanceMetric: osm_cpu_utilization
+   performanceValue:
+       performanceValue:
+           performanceValue: '0.9563615332000001'
+           vduName: test_fet7912-2-ubuntuvnf2vdu1-1
+           vnfMemberIndex: '2'
+       timestamp: 1568977549.065
+
