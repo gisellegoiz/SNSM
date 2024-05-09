@@ -111,3 +111,26 @@ Em resposta, você obteria uma lista das métricas VNF disponíveis, por exemplo
            vnfMemberIndex: '2'
        timestamp: 1568977549.065
 
+
+
+
+# A próxima etapa é ativar a coleta de métricas em seus VNFDs. Cada métrica a ser coletada do VIM para cada VDU deve ser descrita tanto no nível do VDU ​​quanto no nível do VNF. Por exemplo:
+
+vdu:
+   id: hackfest_basic_metrics-VM
+  ...  
+    monitoring-parameter:
+    - id: vnf_cpu_util
+      name: vnf_cpu_util
+      performance-metric: cpu_utilization
+    - id: vnf_memory_util
+      name: vnf_memory_util
+      performance-metric: average_memory_utilization
+    - id: vnf_packets_sent
+      name: vnf_packets_sent
+      performance-metric: packets_sent
+    - id: vnf_packets_received
+      name: vnf_packets_received
+      performance-metric: packets_received
+Como você pode ver, uma lista de “métricas NFVI” é definida primeiro no nível VDU, que contém um ID e o nome da métrica normalizada correspondente (neste caso, cpu_utilizatione average_memory_utilization). Os nomes das métricas normalizadas são: cpu_utilization, average_memory_utilization, disk_read_ops, disk_write_ops, disk_read_bytes, disk_write_bytes, packets_received, packets_sent, packets_out_dropped,packets_in_dropped       
+
