@@ -133,8 +133,39 @@ vdu:
     - id: vnf_packets_received
       name: vnf_packets_received
       performance-metric: packets_received
-Como você pode ver, uma lista de “métricas NFVI” é definida primeiro no nível VDU, que contém um ID e o nome da métrica normalizada correspondente (neste caso, cpu_utilizatione average_memory_utilization). Os nomes das métricas normalizadas são: cpu_utilization, average_memory_utilization, disk_read_ops, disk_write_ops, disk_read_bytes, disk_write_bytes, packets_received, packets_sent, packets_out_dropped,packets_in_dropped       
+Como você pode ver, uma lista de “métricas NFVI” é definida primeiro no nível VDU, que contém um ID e o nome da métrica normalizada correspondente (neste caso, cpu_utilizatione average_memory_utilization). Os nomes das métricas normalizadas são: cpu_utilization, average_memory_utilization, disk_read_ops, disk_write_ops, disk_read_bytes, disk_write_bytes, packets_received, packets_sent, packets_out_dropped,packets_in_dropped     
 
+
+### 5.5.1.4.3. 3) Consultando métricas através do NBI baseado em OSM SOL005
+Para coleta de métricas por meio do NBI, deve-se seguir o seguinte formato de URL:
+
+https://<host-ip>:<nbi-port>/osm/nspm/v1/pm_jobs/<project-id>/reports/<network-service-id>
+
+Onde:
+
+<host-ip>: É a máquina onde o OSM está instalado.
+
+<nbi-port>: A porta NBI, ou seja, 9999
+
+<project-id>: Atualmente pode ser qualquer string.
+
+<network-service-id>: É o NS ID obtido após a instanciação do serviço de rede.
+
+Observe que um token deve ser obtido primeiro para consultar uma métrica. Mais informações sobre isso podem ser encontradas na documentação do OSM NBI
+
+Em resposta, você obteria uma lista das métricas VNF disponíveis, por exemplo:
+
+   performanceMetric: osm_cpu_utilization
+   performanceValue:
+       performanceValue:
+           performanceValue: '0.9563615332000001'
+           vduName: test_fet7912-2-ubuntuvnf2vdu1-1
+           vnfMemberIndex: '2'
+       timestamp: 1568977549.065
+
+
+
+### 5.5.3.3. Como ativar/desativar o escalonamento automático
 
 
 ### 5.5.4.3. Exemplo
