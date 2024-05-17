@@ -35,6 +35,7 @@ if token_auth:
             'accept': 'application/json',
         }
 
+########################## INFOSLICE ########################
 
 def fetch_slices_and_nsr_refs():
     slice_url = f"https://nbi:9999/osm/nsilcm/v1/netslice_instances"
@@ -263,8 +264,9 @@ available_resources_vim = available_resources(vims)
 print(available_resources_vim)
 print("\n")
 
+##################################### SMART ##########################################################
 
-## smart - compara os recursos previstos com os recursos disponiveis nos VIMs
+
 def compare_resources_vim():
     # Calculando a soma dos recursos previstos
     total_cpus_needed = df_forecast['num_virtual_cpu'].sum()
