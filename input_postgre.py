@@ -12,13 +12,13 @@ postgres_str = f'postgresql://{user}:{password}@{host}:{port}/{dbname}'
 engine = create_engine(postgres_str)
 
 data_eMBB = {
-    'slice_id': ['bb5e3eed-9fd7-491b-a49d-f5ed58b8f460'],
+    'slice_id': ['557c6d51-3b04-42e4-bbf5-c836abcc0ea3'],
     'service_type': ['eMBB'],
-    'ns_id': ['203e09eb-5d6f-443c-bb1f-9ff0fb4d30d9'],
-    'vnf_id': ['be8de8c3-73f4-43ba-a3ce-a5f7dcef9512'],
-    'vnfd_id': ['83d40159-e8e8-4452-ad8e-391d10f1cb69'],
+    'ns_id': ['dc9aeb25-c285-43c4-8560-30fcae1be71b'],
+    'vnf_id': ['51cd1af8-56e8-4bc1-8b68-8dc47b228cff,'],
+    'vnfd_id': ['936edd48-0ff5-49fc-bcd4-7d2b56415172'],
     'vdu_id': ['ubuntu_slice-VM'],
-    'num-virtual-cpu': ['4'],
+    'num-virtual-cpu': ['2'],
     'virtual-memory-size': ['2'],
 
 
