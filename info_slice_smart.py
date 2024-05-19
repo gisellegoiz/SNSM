@@ -150,7 +150,7 @@ def consulta_banco():
         engine = create_engine(database_url)
 
         # Consulta SQL
-        query = "SELECT * FROM netslice_embb"
+        query = "SELECT * FROM slice_embb"
 
         # tranformando em um dataframe
         df_banco = pd.read_sql(query, engine)
