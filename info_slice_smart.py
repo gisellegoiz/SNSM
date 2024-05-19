@@ -20,7 +20,7 @@ json_data = {
     'password': 'admin',
     'project_id': 'admin',
 }
-response = requests.post(f'https://nbi:9999/osm/admin/v1/tokens', headers=headers, json=json_data, verify=False)
+response = requests.post(f'https://192.168.1.66:9999/osm/admin/v1/tokens', headers=headers, json=json_data, verify=False)
 token_auth = response.json()
 
 if token_auth:
@@ -38,7 +38,7 @@ if token_auth:
 ########################## INFOSLICE ########################
 
 def fetch_slices_and_nsr_refs():
-    slice_url = f"https://nbi:9999/osm/nsilcm/v1/netslice_instances"
+    slice_url = f"https://192.168.1.66:9999/osm/nsilcm/v1/netslice_instances"
     response = requests.get(slice_url, headers=headers, verify=False)
     nsr_refs = []
     if response.status_code != 200:
@@ -68,7 +68,7 @@ nsr_refs = fetch_slices_and_nsr_refs()
 
 
 def fetch_vnfr_ids_from_ns(nsr_refs):
-    base_url = "https://nbi:9999/osm/nslcm/v1/ns_instances/"
+    base_url = "https://192.168.1.66:9999/osm/nslcm/v1/ns_instances/"
     vnfr_ids = []
     vnfd_ids = []
     for nsr_ref in nsr_refs:
@@ -94,7 +94,7 @@ vnfd_ids = fetch_vnfr_ids_from_ns(nsr_refs)
 
 
 def fetch_vdu_details_from_vnfs(vnfd_ids):
-    base_url = "https://nbi:9999/osm/vnfpkgm/v1/vnf_packages/"
+    base_url = "https://192.168.1.66:9999/osm/vnfpkgm/v1/vnf_packages/"
     vdu_details_list = []
 
     for vnfd_identifier in vnfd_ids:
@@ -221,7 +221,7 @@ compare_resources(df_forecast, vdu_details_df)
 # infovim
 
 def fetch_vims():
-    base_url = "https://nbi:9999/osm/admin/v1/vims"
+    base_url = "https://192.168.1.66:9999/osm/admin/v1/vims"
     url = f"{base_url}"
     response = requests.get(url, headers=headers, verify=False)
     if response.status_code == 200:
@@ -313,7 +313,7 @@ def verticalscale(df_forecast):
             }
         }
         verticalscale_up = requests.post(
-            f'https://nbi:9999/osm/nslcm/v1/ns_instances/{ns_id}/verticalscale',
+            f'https://192.168.1.66:9999/osm/nslcm/v1/ns_instances/{ns_id}/verticalscale',
             headers=headers, json=update_data, verify=False)
         if verticalscale_up.status_code == 202:
             print("Update realizado com sucesso")
