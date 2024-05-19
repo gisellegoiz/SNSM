@@ -214,7 +214,6 @@ def compare_resources(df_forecast, vdu_details_df):
             print("\n")
 
 
-# Supondo que df_forecast e vdu_details_df sejam DataFrames já definidos e carregados com os dados adequados.
 compare_resources(df_forecast, vdu_details_df)
 
 
