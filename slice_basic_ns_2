@@ -1,0 +1,36 @@
+nsd:
+  nsd:
+  - id: slice_basic_ns_2
+    name: slice_basic_ns_2
+    description: NSD to be used on Slice Testing
+    designer: OSM
+    version: 1.0
+
+    vnfd-id:
+    - slice_basic_vnf_2
+
+    sapd:
+    - id: nsd_cp_mgmt
+      virtual-link-desc: nsd_vnfd_vld_mgmt
+    - id: nsd_cp_data
+      virtual-link-desc: nsd_vnfd_vld_data
+
+    virtual-link-desc:
+    - id: nsd_vnfd_vld_mgmt
+      mgmt-network: true
+    - id: nsd_vnfd_vld_data
+
+    df:
+    - id: default-df
+      vnf-profile:
+      - id: edge
+        virtual-link-connectivity:
+        - constituent-cpd-id:
+          - constituent-base-element-id: edge
+            constituent-cpd-id: eth0-ext
+          virtual-link-profile-id: nsd_vnfd_vld_mgmt
+        - constituent-cpd-id:
+          - constituent-base-element-id: edge
+            constituent-cpd-id: eth1-ext
+          virtual-link-profile-id: nsd_vnfd_vld_data
+        vnfd-id: slice_basic_vnf_2
