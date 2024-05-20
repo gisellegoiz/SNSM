@@ -1,6 +1,6 @@
 nst:
 -   SNSSAI-identifier:
-        slice-service-type: eMBB
+        slice-service-type: uRLLC
     id: slice_basic_nst_2
     name: slice_basic_nst_2
     netslice-subnet:
