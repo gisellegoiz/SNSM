@@ -1,0 +1,25 @@
+nst:
+-   SNSSAI-identifier:
+        slice-service-type: eMBB
+    id: slice_basic_nst_1
+    name: slice_basic_nst_1
+    netslice-subnet:
+    -   description: NetSlice Subnet (service) composed by 1 vnf with 2 cp
+        id: slice_basic_nsd_1
+        is-shared-nss: false
+        nsd-ref: slice_basic_ns
+
+    netslice-vld:
+    -   id: slice_vld_mgmt
+        mgmt-network: true
+        name: slice_vld_mgmt
+        nss-connection-point-ref:
+        -   nsd-connection-point-ref: nsd_cp_mgmt
+            nss-ref: slice_basic_nsd_1
+
+        type: ELAN
+    -   id: slice_vld_data1
+        name: slice_vld_data1
+        nss-connection-point-ref:
+        -   nsd-connection-point-ref: nsd_cp_data
+            nss-ref: slice_basic_nsd_1
