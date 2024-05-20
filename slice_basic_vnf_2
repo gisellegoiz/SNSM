@@ -1,0 +1,79 @@
+vnfd:
+  description: VNFD with 2 CPs to be used on Slice Testing
+  df:
+  - id: default-df
+    instantiation-level:
+    - id: default-instantiation-level
+      vdu-level:
+      - number-of-instances: 1
+        vdu-id: ubuntu_slice-VM_2
+    vdu-profile:
+    - id: ubuntu_slice-VM_2
+      min-number-of-instances: 1
+  ext-cpd:
+  - id: eth0-ext
+    int-cpd:
+      cpd: eth0-int
+      vdu-id: ubuntu_slice-VM_2
+  - id: eth1-ext
+    int-cpd:
+      cpd: eth1-int
+      vdu-id: ubuntu_slice-VM_2
+  id: slice_basic_vnf_2
+  mgmt-cp: eth0-ext
+  product-name: slice_basic_vnf_2
+  provider: OSM
+  sw-image-desc:
+  - id: ubuntu18.04
+    image: ubuntu18.04
+    name: ubuntu18.04
+  - id: ubuntu18.04-aws
+    name: ubuntu18.04-aws
+    image: ubuntu/images/hvm-ssd/ubuntu-artful-17.10-amd64-server-20180509
+    vim-type: aws
+  - id: ubuntu18.04-azure
+    name: ubuntu18.04-azure
+    image: Canonical:UbuntuServer:18.04-LTS:latest
+    vim-type: azure
+  - id: ubuntu18.04-gcp
+    name: ubuntu18.04-gcp
+    image: ubuntu-os-cloud:image-family:ubuntu-1804-lts
+    vim-type: gcp
+  vdu:
+  - cloud-init-file:
+    description: ubuntu_slice-VM_2
+    id: ubuntu_slice-VM_2
+    int-cpd:
+    - id: eth0-int
+      virtual-network-interface-requirement:
+      - name: eth0
+        virtual-interface:
+          bandwidth: 0
+          type: VIRTIO
+          vpci: 0000:00:0a.0
+    - id: eth1-int
+      virtual-network-interface-requirement:
+      - name: eth1
+        virtual-interface:
+          bandwidth: 0
+          type: VIRTIO
+          vpci: 0000:00:0a.0
+    name: ubuntu_slice-VM_2
+    sw-image-desc: ubuntu18.04
+    alternative-sw-image-desc:
+    - ubuntu18.04-aws
+    - ubuntu18.04-azure
+    - ubuntu18.04-gcp
+    virtual-compute-desc: ubuntu_slice-VM_2-compute
+    virtual-storage-desc:
+    - ubuntu_slice-VM_2-storage
+  version: 1.0
+  virtual-compute-desc:
+  - id: ubuntu_slice-VM_2-compute
+    virtual-cpu:
+      num-virtual-cpu: 1
+    virtual-memory:
+      size: 1.0
+  virtual-storage-desc:
+  - id: ubuntu_slice-VM_2-storage
+    size-of-storage: 10
