@@ -13,14 +13,14 @@ postgres_str = f'postgresql://{user}:{password}@{host}:{port}/{dbname}'
 engine = create_engine(postgres_str)
 
 data_eMBB = {
-    'slice_id': ['48e87628-43c1-4906-ac77-c0ccc5b836a8'],
+    'slice_id': ['4d321e63-9f9d-47b9-96cb-066b1bda1835'],
     'service_type': ['eMBB'],
-    'ns_id': ['8871c36e-e0bd-43aa-b37d-0a34e4cd02e2'],
-    'vnf_id': ['952ea0a2-ac44-4a92-9b81-d99730c4e770'],
+    'ns_id': ['03b855bc-75c0-4726-b237-3113e04d94c6'],
+    'vnf_id': ['f8129428-403f-4dca-9354-25a317c88ce1'],
     'vnfd_id': ['94a5eab2-5910-4be5-a508-a8605f1aeeb7'],
     'vdu_id': ['ubuntu_slice-VM_1'],
     'num_virtual_cpu': ['1'],
-    'virtual_memory_size': ['4708027'],
+    'virtual_memory_size': ['1000'],
 
 }
 df_eMBB = pd.DataFrame(data_eMBB)
@@ -32,14 +32,14 @@ df_eMBB.to_sql('slice_embb', con=engine, if_exists='replace', index=False)
 
 
 data_uRRLC = {
-    'slice_id': ['b566e918-10f8-427c-8624-2385fda3a20e'],
+    'slice_id': ['bb9f0585-5bc4-4ed4-85b1-bfe9888421e2'],
     'service_type': ['URRLC'],
-    'ns_id': ['98d45125-fd8d-4225-a578-948bbfb1b89f'],
-    'vnf_id': [' d2591811-2ea4-4a63-b5a8-ba12ed70aead'],
+    'ns_id': ['ced1e226-1bdf-408f-8ead-50628653ce24'],
+    'vnf_id': ['17e0e972-5c92-4914-8ee5-c13bc3e462b5'],
     'vnfd_id': ['e4e996d9-51af-4cd3-842c-437ef5f24ee9'],
-    'vdu_id': ['ubuntu_slice-VM_2'],
+    'vdu_id': ['buntu_slice-VM_2'],
     'num_virtual_cpu': ['1'],
-    'virtual_memory_size': ['4599531'],
+    'virtual_memory_size': ['1000'],
 
 }
 df_uRRLC = pd.DataFrame(data_uRRLC)
@@ -51,14 +51,14 @@ df_uRRLC.to_sql('slice_urrlc', con=engine, if_exists='replace', index=False)
 
 
 data_mMTC = {
-    'slice_id': ['35ba166d-535b-4fcb-9fc5-9530dca6d734'],
+    'slice_id': ['29a36a25-3083-44a5-a987-3ee3b5a1f859'],
     'service_type': ['mMTC'],
-    'ns_id': ['147dbdf5-74da-4c8b-94de-8c275925e1d9'],
-    'vnf_id': ['94ec3a57-39f6-4e1a-b4ce-aea8848ce1ad'],
+    'ns_id': ['819826ae-a082-438c-a916-e7401463c790'],
+    'vnf_id': ['6b0f3d41-1ad0-49c5-aa5c-f04f14415fdd'],
     'vnfd_id': ['e152158a-1404-422a-a974-c36de9572efa'],
     'vdu_id': ['ubuntu_slice-VM_3'],
     'num_virtual_cpu': ['1'],
-    'virtual_memory_size': ['513829'],
+    'virtual_memory_size': ['1000'],
 
 }
 df_mMTC = pd.DataFrame(data_mMTC)
