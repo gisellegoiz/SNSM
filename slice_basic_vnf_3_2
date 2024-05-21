@@ -19,9 +19,9 @@ vnfd:
     int-cpd:
       cpd: eth1-int
       vdu-id: ubuntu_slice-VM_3
-  id: slice_basic_vnf_3
+  id: slice_basic_vnf_3_2
   mgmt-cp: eth0-ext
-  product-name: slice_basic_vnf_3
+  product-name: slice_basic_vnf_3_2
   provider: OSM
   sw-image-desc:
   - id: ubuntu18.04
