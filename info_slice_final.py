@@ -156,11 +156,11 @@ def consulta_banco():
         df_embb = pd.read_sql(query_embb, engine)
 
         # Consulta SQL para a tabela slice_urllc
-        query_urllc = "SELECT * FROM slice_urllc_1"
+        query_urllc = "SELECT * FROM slice_urllc_2"
         df_urllc = pd.read_sql(query_urllc, engine)
 
         # Consulta SQL para a tabela slice_mMTC
-        query_mmtc = "SELECT * FROM slice_mmtc_1"
+        query_mmtc = "SELECT * FROM slice_mmtc_3"
         df_mmtc = pd.read_sql(query_mmtc, engine)
 
         # Fechar a conexão
