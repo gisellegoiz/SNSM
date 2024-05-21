@@ -40,7 +40,7 @@ vnfd:
     image: ubuntu-os-cloud:image-family:ubuntu-1804-lts
     vim-type: gcp
   vdu:
-  - cloud-init-file: cloud-config.txt
+  - cloud-init-file:
     description: ubuntu_slice-VM_1
     id: ubuntu_slice-VM_1
     int-cpd:
