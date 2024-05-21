@@ -306,7 +306,7 @@ def verticalscale(df_forecast):
                     "vduid": row['vdu_id'],
                     "vduCountIndex": 0,
                     "virtualMemory": row['virtual_memory_size'],
-                    "sizeOfStorage": 5,
+                    "sizeOfStorage": 10,
                     "numVirtualCpu": row['num_virtual_cpu'],
                 }
             }
