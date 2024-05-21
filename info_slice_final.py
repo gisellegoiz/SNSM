@@ -156,18 +156,18 @@ def consulta_banco():
         df_embb = pd.read_sql(query_embb, engine)
 
         # Consulta SQL para a tabela slice_urllc
-        query_urllc = "SELECT * FROM slice_urllc"
-        df_urllc = pd.read_sql(query_urllc, engine)
+        query_uRLLC = "SELECT * FROM slice_uRLLC"
+        df_uRLLC = pd.read_sql(query_uRLLC, engine)
 
-        # Consulta SQL para a tabela slice_mmtc
-        query_mmtc = "SELECT * FROM slice_mmtc"
-        df_mmtc = pd.read_sql(query_mmtc, engine)
+        # Consulta SQL para a tabela slice_mMTC
+        query_mMTC = "SELECT * FROM slice_mMTC"
+        df_mMTC = pd.read_sql(query_mMTC, engine)
 
         # Fechar a conexão
         engine.dispose()
 
         # Concatenar os DataFrames
-        df_banco = pd.concat([df_embb, df_urllc, df_mmtc], axis=0, ignore_index=True)
+        df_banco = pd.concat([df_embb, df_uRLLC, df_mMTC], axis=0, ignore_index=True)
 
         return df_banco
     except psycopg2.Error as e:
