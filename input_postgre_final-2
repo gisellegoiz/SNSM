@@ -44,7 +44,7 @@ data_uRLLC = {
 df_uRLLC = pd.DataFrame(data_uRLLC)
 print(df_uRLLC)
 
-df_uRRLC.to_sql('slice_uRLLC', con=engine, if_exists='replace', index=False)
+df_uRLLC.to_sql('slice_uRLLC', con=engine, if_exists='replace', index=False)
 
 
 data_mMTC = {
