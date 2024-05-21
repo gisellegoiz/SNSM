@@ -1,3 +1,4 @@
+
 from sqlalchemy import create_engine
 import pandas as pd
 from io import StringIO
@@ -19,7 +20,7 @@ data_eMBB = {
     'vnfd_id': ['94a5eab2-5910-4be5-a508-a8605f1aeeb7'],
     'vdu_id': ['ubuntu_slice-VM_1'],
     'num_virtual_cpu': ['1'],
-    'virtual_memory_size': ['1'],
+    'virtual_memory_size': ['4708027'],
 
 }
 df_eMBB = pd.DataFrame(data_eMBB)
@@ -30,21 +31,23 @@ df_eMBB.to_sql('slice_embb', con=engine, if_exists='replace', index=False)
 
 
 
-data_uRLLC = {
+data_uRRLC = {
     'slice_id': ['b566e918-10f8-427c-8624-2385fda3a20e'],
-    'service_type': ['URLLC'],
+    'service_type': ['URRLC'],
     'ns_id': ['98d45125-fd8d-4225-a578-948bbfb1b89f'],
     'vnf_id': [' d2591811-2ea4-4a63-b5a8-ba12ed70aead'],
     'vnfd_id': ['e4e996d9-51af-4cd3-842c-437ef5f24ee9'],
     'vdu_id': ['ubuntu_slice-VM_2'],
     'num_virtual_cpu': ['1'],
-    'virtual_memory_size': ['4'],
+    'virtual_memory_size': ['4599531'],
 
 }
-df_uRLLC = pd.DataFrame(data_uRLLC)
-print(df_uRLLC)
+df_uRRLC = pd.DataFrame(data_uRRLC)
+print(df_uRRLC)
 
-df_uRLLC.to_sql('slice_uRLLC', con=engine, if_exists='replace', index=False)
+df_uRRLC.to_sql('slice_urrlc', con=engine, if_exists='replace', index=False)
+
+
 
 
 data_mMTC = {
@@ -55,13 +58,13 @@ data_mMTC = {
     'vnfd_id': ['e152158a-1404-422a-a974-c36de9572efa'],
     'vdu_id': ['ubuntu_slice-VM_3'],
     'num_virtual_cpu': ['1'],
-    'virtual_memory_size': ['5'],
+    'virtual_memory_size': ['513829'],
 
 }
 df_mMTC = pd.DataFrame(data_mMTC)
 print(df_mMTC)
 
-df_mMTC.to_sql('slice_mMTC', con=engine, if_exists='replace', index=False)
+df_mMTC.to_sql('slice_mmtc', con=engine, if_exists='replace', index=False)
 
 
 
