@@ -84,7 +84,7 @@ def fetch_vnfr_ids_from_ns(nsr_refs):
                 vnfr_ids.append(constituent_vnfr_refs)
             if vnfd_identifier:
                 vnfd_ids.append(vnfd_identifier)
-                # print(f"NS_ID: {nsr_ref}, VNF_ID: {constituent_vnfr_refs}, VNFD_ID: {vnfd_identifier}")
+                print(f"NS_ID: {nsr_ref}, VNF_ID: {constituent_vnfr_refs}, VNFD_ID: {vnfd_identifier}")
         else:
             print(f"Failed to retrieve details for NSR Ref {nsr_ref}. Status code: {response.status_code}")
     return vnfr_ids and vnfd_ids
@@ -129,7 +129,7 @@ def fetch_vdu_details_from_vnfs(vnfd_ids):
 
                         })
 
-                        # print(f" vnfd_id: {vnfd_identifier}, vdu_id:{vdu_id}, num_virtual_cpu:{compute_data.get('virtual-cpu', {}).get('num-virtual-cpu', '')}, virtual_memory_size: {compute_data.get('virtual-memory', {}).get('size', '')}")
+                        print(f" vnfd_id: {vnfd_identifier}, vdu_id:{vdu_id}, num_virtual_cpu:{compute_data.get('virtual-cpu', {}).get('num-virtual-cpu', '')}, virtual_memory_size: {compute_data.get('virtual-memory', {}).get('size', '')}")
             else:
                 print(f"No VDU or compute/storage description data available for VNFD_ID {vnfd_identifier}")
         else:
@@ -152,22 +152,22 @@ def consulta_banco():
         engine = create_engine(database_url)
 
         # Consulta SQL para a tabela slice_embb
-        query_embb = "SELECT * FROM slice_embb"
+        query_embb = "SELECT * FROM slice_embb_1"
         df_embb = pd.read_sql(query_embb, engine)
 
         # Consulta SQL para a tabela slice_urllc
-        query_uRLLC = "SELECT * FROM slice_uRLLC"
-        df_uRLLC = pd.read_sql(query_uRLLC, engine)
+        query_uRLLC = "SELECT * FROM slice_urllc_1"
+        df_urllc = pd.read_sql(query_urllc, engine)
 
         # Consulta SQL para a tabela slice_mMTC
-        query_mMTC = "SELECT * FROM slice_mMTC"
-        df_mMTC = pd.read_sql(query_mMTC, engine)
+        query_mmtc = "SELECT * FROM slice_mmtc_1"
+        df_mmtc = pd.read_sql(query_mmtc, engine)
 
         # Fechar a conexão
         engine.dispose()
 
         # Concatenar os DataFrames
-        df_banco = pd.concat([df_embb, df_uRLLC, df_mMTC], axis=0, ignore_index=True)
+        df_banco = pd.concat([df_embb, df_urllc, df_mmtc], axis=0, ignore_index=True)
 
         return df_banco
     except psycopg2.Error as e:
