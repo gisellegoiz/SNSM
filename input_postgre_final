@@ -26,7 +26,7 @@ data_eMBB = {
 df_eMBB = pd.DataFrame(data_eMBB)
 print(df_eMBB)
 
-df_eMBB.to_sql('slice_embb', con=engine, if_exists='replace', index=False)
+df_eMBB.to_sql('slice_embb_1', con=engine, if_exists='replace', index=False)
 
 
 
@@ -45,7 +45,7 @@ data_uRRLC = {
 df_uRRLC = pd.DataFrame(data_uRRLC)
 print(df_uRRLC)
 
-df_uRRLC.to_sql('slice_urrlc', con=engine, if_exists='replace', index=False)
+df_uRRLC.to_sql('slice_urrlc_2', con=engine, if_exists='replace', index=False)
 
 
 
@@ -64,7 +64,7 @@ data_mMTC = {
 df_mMTC = pd.DataFrame(data_mMTC)
 print(df_mMTC)
 
-df_mMTC.to_sql('slice_mmtc', con=engine, if_exists='replace', index=False)
+df_mMTC.to_sql('slice_mmtc_3', con=engine, if_exists='replace', index=False)
 
 
 
