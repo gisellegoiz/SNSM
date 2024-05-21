@@ -30,9 +30,9 @@ df_eMBB.to_sql('slice_embb', con=engine, if_exists='replace', index=False)
 
 
 
-data_mMTC = {
+data_uRLLC = {
     'slice_id': ['b566e918-10f8-427c-8624-2385fda3a20e'],
-    'service_type': ['mMTC'],
+    'service_type': ['URLLC'],
     'ns_id': ['98d45125-fd8d-4225-a578-948bbfb1b89f'],
     'vnf_id': [' d2591811-2ea4-4a63-b5a8-ba12ed70aead'],
     'vnfd_id': ['e4e996d9-51af-4cd3-842c-437ef5f24ee9'],
@@ -41,10 +41,10 @@ data_mMTC = {
     'virtual_memory_size': ['4'],
 
 }
-df_mMTC = pd.DataFrame(data_mMTC)
-print(df_mMTC)
+df_uRLLC = pd.DataFrame(data_uRLLC)
+print(df_uRLLC)
 
-df_uRRLC.to_sql('slice_mMTC', con=engine, if_exists='replace', index=False)
+df_uRRLC.to_sql('slice_uRLLC', con=engine, if_exists='replace', index=False)
 
 
 data_mMTC = {
