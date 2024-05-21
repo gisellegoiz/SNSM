@@ -13,10 +13,10 @@ postgres_str = f'postgresql://{user}:{password}@{host}:{port}/{dbname}'
 engine = create_engine(postgres_str)
 
 data_eMBB = {
-    'slice_id': ['4d321e63-9f9d-47b9-96cb-066b1bda1835'],
+    'slice_id': ['8ff832c8-e6c6-4eb0-b3fc-2b9cf330b7d1'],
     'service_type': ['eMBB'],
-    'ns_id': ['03b855bc-75c0-4726-b237-3113e04d94c6'],
-    'vnf_id': ['f8129428-403f-4dca-9354-25a317c88ce1'],
+    'ns_id': ['427c9595-9432-40c7-b876-79181551af7f'],
+    'vnf_id': ['27fea911-254f-4f1c-805b-bf7efb7bc8eb'],
     'vnfd_id': ['94a5eab2-5910-4be5-a508-a8605f1aeeb7'],
     'vdu_id': ['ubuntu_slice-VM_1'],
     'num_virtual_cpu': ['1'],
@@ -32,10 +32,10 @@ df_eMBB.to_sql('slice_embb_1', con=engine, if_exists='replace', index=False)
 
 
 data_uRRLC = {
-    'slice_id': ['bb9f0585-5bc4-4ed4-85b1-bfe9888421e2'],
+    'slice_id': ['4af3f24c-3c33-4f93-abb1-0edca9e4f4c3'],
     'service_type': ['URRLC'],
-    'ns_id': ['ced1e226-1bdf-408f-8ead-50628653ce24'],
-    'vnf_id': ['17e0e972-5c92-4914-8ee5-c13bc3e462b5'],
+    'ns_id': ['05afa55c-fc12-4553-b0f9-6c1df0283416'],
+    'vnf_id': ['b4498e7a-4d88-4a01-9507-0c569751084f'],
     'vnfd_id': ['e4e996d9-51af-4cd3-842c-437ef5f24ee9'],
     'vdu_id': ['buntu_slice-VM_2'],
     'num_virtual_cpu': ['1'],
@@ -51,10 +51,10 @@ df_uRRLC.to_sql('slice_urrlc_2', con=engine, if_exists='replace', index=False)
 
 
 data_mMTC = {
-    'slice_id': ['29a36a25-3083-44a5-a987-3ee3b5a1f859'],
+    'slice_id': ['a7ed8693-9cd9-43f5-9bbd-114d4b9d1f00'],
     'service_type': ['mMTC'],
-    'ns_id': ['819826ae-a082-438c-a916-e7401463c790'],
-    'vnf_id': ['6b0f3d41-1ad0-49c5-aa5c-f04f14415fdd'],
+    'ns_id': ['5cab8486-779c-4f0f-a397-563c2eaa9f97'],
+    'vnf_id': ['34092c89-d36e-47af-ae6b-933bec9179bf'],
     'vnfd_id': ['e152158a-1404-422a-a974-c36de9572efa'],
     'vdu_id': ['ubuntu_slice-VM_3'],
     'num_virtual_cpu': ['1'],
