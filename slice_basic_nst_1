@@ -7,7 +7,7 @@ nst:
     -   description: NetSlice Subnet (service) composed by 1 vnf with 2 cp
         id: slice_basic_nsd_1
         is-shared-nss: false
-        nsd-ref: slice_basic_ns
+        nsd-ref: slice_basic_ns_1
 
     netslice-vld:
     -   id: slice_vld_mgmt
