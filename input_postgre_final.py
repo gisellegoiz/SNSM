@@ -31,9 +31,9 @@ df_eMBB.to_sql('slice_embb_1', con=engine, if_exists='replace', index=False)
 
 
 
-data_uRRLC = {
+data_uRLLC = {
     'slice_id': ['4af3f24c-3c33-4f93-abb1-0edca9e4f4c3'],
-    'service_type': ['URRLC'],
+    'service_type': ['URLLC'],
     'ns_id': ['05afa55c-fc12-4553-b0f9-6c1df0283416'],
     'vnf_id': ['b4498e7a-4d88-4a01-9507-0c569751084f'],
     'vnfd_id': ['e4e996d9-51af-4cd3-842c-437ef5f24ee9'],
@@ -42,10 +42,10 @@ data_uRRLC = {
     'virtual_memory_size': ['1000'],
 
 }
-df_uRRLC = pd.DataFrame(data_uRRLC)
-print(df_uRRLC)
+df_uRLLC = pd.DataFrame(data_uRLLC)
+print(df_uRLLC)
 
-df_uRRLC.to_sql('slice_urrlc_2', con=engine, if_exists='replace', index=False)
+df_uRLLC.to_sql('slice_urllc_2', con=engine, if_exists='replace', index=False)
 
 
 
