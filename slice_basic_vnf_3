@@ -71,9 +71,9 @@ vnfd:
   virtual-compute-desc:
   - id: ubuntu_slice-VM_3-compute
     virtual-cpu:
-      num-virtual-cpu: 1
+      num-virtual-cpu: 8
     virtual-memory:
-      size: 1.0
+      size: 16.0
   virtual-storage-desc:
   - id: ubuntu_slice-VM_3-storage
     size-of-storage: 10
