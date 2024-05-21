@@ -19,9 +19,9 @@ vnfd:
     int-cpd:
       cpd: eth1-int
       vdu-id: ubuntu_slice-VM_1
-  id: slice_basic_vnf
+  id: slice_basic_vnf_1
   mgmt-cp: eth0-ext
-  product-name: slice_basic_vnf
+  product-name: slice_basic_vnf_1
   provider: OSM
   sw-image-desc:
   - id: ubuntu18.04
@@ -71,9 +71,9 @@ vnfd:
   virtual-compute-desc:
   - id: ubuntu_slice-VM_1-compute
     virtual-cpu:
-      num-virtual-cpu: 1
+      num-virtual-cpu: 4
     virtual-memory:
-      size: 1.0
+      size: 8.0
   virtual-storage-desc:
   - id: ubuntu_slice-VM_1-storage
     size-of-storage: 10
