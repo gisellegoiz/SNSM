@@ -1,3 +1,4 @@
+import time
 import requests
 import json
 import warnings
@@ -7,6 +8,8 @@ import pprint
 import psycopg2
 import pandas as pd
 from sqlalchemy import create_engine
+
+start_time = time.time()
 
 warnings.filterwarnings('ignore', message='Unverified HTTPS request')
 
@@ -342,3 +345,8 @@ def verticalscale(df_forecast):
 
 # Assume que headers é definido em algum lugar do seu script
 verticalscale(df_forecast)
+
+end_time = time.time()
+
+execution_time = end_time - start_time
+print(f"O script demorou {execution_time} segundos para ser executado.")
