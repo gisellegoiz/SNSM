@@ -5,6 +5,7 @@
 # SNSM - Smart Network Slicing
 <sub>*Bem-vindo(a) à página do código-fonte do projeto de mestrado.</sub>
 
+<div style="text-align: justify;">
 A arquitetura baseada em nuvem das redes 5G proporciona maior flexibilidade e agilidade na implantação de novos serviços.
 O Third Generation Partnership Project
 (3GPP) projetou três principais grupos de serviços:
@@ -32,10 +33,8 @@ Orchestration
 (MANO), e é capaz de distribuir os recursos de rede, armazenamento e processamento entre as fatias de rede dinamicamente. Para tal, o SNSM dispõe de componentes que empregam algoritmos de ML (supervisionado) para classificar e agrupar os fluxos de rede, de acordo com os padrões de tráfego do respectivo Network Slice. Além disso, o SNSM emprega redes neurais recorrentes para previsões dos recursos computacionais necessários às VNFs dos
 Network Slices
 . A principal contribuição deste trabalho está na automação do gerenciamento de recursos para compartilhamento eficiente da infraestrutura em ambientes 5G. O modelo Random Forest foi aplicado em dataset contendo fluxos de rede uma rede IP real e obteve acurácia de 98,6% na classificação das aplicações. Além disso, foram aplicadas Redes Neurais Recorrentes do tipo LSTM e GRU para previsão de recursos computacionais, utilizando um dataset com dados reais de um provedor de nuvem. O sistema foi implementado simulando três Network Slices e alocou com sucesso os recursos necessários para atender a cada um deles, mostrando-se uma solução promissora para alocação dinâmica de recursos em ambientes 5G.
-As a experienced Data Scientist and Air Force pilot I combine analytical skills, ability to work in team environments, and attention to details. Having spend the last years applying Machine Learning to Brazilian Air Force real problems, I developed a critical thinking and problem-solving skills.
-
-My credentials include a Master's in Space Science and Technology from the Aeronautics Institute of Technology (ITA), an institution of higher education and advanced research rated as one of the top and most prestigious engineering schools in Brazil, and a MBA in Project and Process Management from the University of Air Force (UNIFA).
-
+</div>
+  
 **Background in:** Python, Machine Learning, Space Operations and Mathematical Optimisation.
 
 **Links:**
