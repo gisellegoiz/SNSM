@@ -12,7 +12,7 @@ O **Smart Network Slicing Manager (SNSM)** é um sistema autônomo desenvolvido 
 ## Arquitetura:
 Veja os tutoriais publicados do Sigmoidal:
 
-* **Como usar o Histograma para Data Science:** https://bit.ly/2L2cMwy
+* **Classifier:** https://github.com/gisellegoiz/SNSM/blob/main/Classifier.ipynb
 * **Como Implementar Regressão Linear com Python:** https://bit.ly/2Li5pzY
 * **Data Science: Investigando o naufrágio do Titanic:** https://bit.ly/2Ubr5SH
 * **Como Tratar Dados Ausentes com Pandas:** https://bit.ly/31KWSMN
