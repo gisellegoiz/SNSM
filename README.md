@@ -3,7 +3,7 @@
 </p>
 
 # Smart Network Slicing (SNSM)
-<sub>Projeto de dissertação de mestrado apresentado ao Programa de Pós-Graduação [Programa de Pós-Graduação em Computação da UFF](https://www.ic.uff.br/).</sub>
+<sub>Projeto de dissertação de mestrado apresentado ao [Programa de Pós-Graduação em Computação da UFF](https://www.ic.uff.br/).</sub>
 <sub>Orientadora: Profa. [Flavia C. Delicato](https://sites.google.com/view/professorflaviadelicato/home) </sub>
 </p>
 
