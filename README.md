@@ -4,8 +4,8 @@
 
 # Smart Network Slicing (SNSM)
 <sub>Projeto de dissertação de mestrado apresentado ao Programa de Pós-Graduação em Computação da Universidade Federal Fluminense.</sub>
-<sub>Orientadora: Profa. FLÁVIA COIMBRA DELICATO </sub>
-* [LinkedIn]([https](https://sites.google.com/view/professorflaviadelicato/home)
+<sub>Orientadora: Profa. ([https](https://sites.google.com/view/professorflaviadelicato/home) </sub>
+</p>
 
 O Smart Network Slicing Manager (SNSM) é um sistema autônomo desenvolvido para alocação inteligente de recursos. Ele atua complementarmente à camada de orquestração do Management and Orchestration (MANO), e é capaz de distribuir os recursos de rede, armazenamento e processamento entre as fatias de rede dinamicamente. Para tal, o SNSM dispõe de componentes que empregam algoritmos de ML (supervisionado) para classificar e agrupar os fluxos de rede, de acordo com os padrões de tráfego do respectivo Network Slice. Além disso, o SNSM emprega redes neurais recorrentes para previsões dos recursos computacionais necessários às VNFs dos Network Slices . A principal contribuição deste trabalho está na automação do gerenciamento de recursos para compartilhamento eficiente da infraestrutura em ambientes 5G. O modelo Random Forest foi aplicado em dataset contendo fluxos de rede uma rede IP real e obteve acurácia de 98,6% na classificação das aplicações. Além disso, foram aplicadas Redes Neurais Recorrentes do tipo LSTM e GRU para previsão de recursos computacionais, utilizando um dataset com dados reais de um provedor de nuvem. O sistema foi implementado simulando três Network Slices e alocou com sucesso os recursos necessários para atender a cada um deles, mostrando-se uma solução promissora para alocação dinâmica de recursos em ambientes 5G.
   
