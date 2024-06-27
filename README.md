@@ -3,7 +3,7 @@
 </p>
 
 # SNSM - Smart Network Slicing
-<sub>*Lead Data Scientist* at Space Operations Center</sub>
+<sub>*Bem-vindo(a) à página do código-fonte do projeto de mestrado.</sub>
 
 As a experienced Data Scientist and Air Force pilot I combine analytical skills, ability to work in team environments, and attention to details. Having spend the last years applying Machine Learning to Brazilian Air Force real problems, I developed a critical thinking and problem-solving skills.
 
