@@ -12,14 +12,15 @@ O **Smart Network Slicing Manager (SNSM)** é um sistema autônomo desenvolvido 
 ## Arquitetura:
 A arquitetura do SNSM é dividida em dois blocos principais:
 
-* **Data Science: Investigando o naufrágio do Titanic:** https://bit.ly/2Ubr5SH
-* **Como Tratar Dados Ausentes com Pandas:** https://bit.ly/31KWSMN
+
 
 
 ## Código Fonte:
 Os códigos foram disponibilizados nos seguintes diretórios:
 
 * **Classifier:** https://github.com/gisellegoiz/SNSM/blob/main/Classifier.ipynb
+* **Predictor:**
+* **Constructor:**
 * **Templates de Configuração (VNFs, NSs, NSTs):** https://github.com/gisellegoiz/SNSM/tree/main/snsm_pkg
 
 ---
